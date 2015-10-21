@@ -52,3 +52,12 @@ Route::post('login-submit', function() {
 	$result .= "| Password:". Request::get('password');
 	return $result;
 });
+
+route::get('posts', function() {
+	return view('posts.index');
+});
+
+Route::get('posts/{id}', function($id) {
+	$post = App\Post::find($id);
+	return view('posts.show')->with('post',$post);
+});
