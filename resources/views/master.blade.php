@@ -13,19 +13,10 @@
 
   </head>
   <body>
-   <div class="container">
-   <div class="navbar">
-    <a class="navbar-brand" href="#">Blog App</a>
-    <ul class="nav navbar-nav">
-      <li>
-
-      <a href="/posts">Posts</a>
-      </li>
-      </ul>
-
-      </div>
+    <div class="container">
+      @include('_navigation')
       @yield('content')
-      </div>
+    </div>
 
     
   </body>
