@@ -55,3 +55,4 @@ Route::post('login-submit', function() {
 
 Route::resource('posts', 'PostsController');
 	
+Route::resource('categories', 'CategoriesController');

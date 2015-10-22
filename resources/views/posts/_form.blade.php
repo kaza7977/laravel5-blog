@@ -1,10 +1,10 @@
  <div class="form-group">
-    {!! Form::label('title', 'Post Title') !!}
+    {!! Form::label('title', 'Category Title') !!}
     {!! Form::text('title', null, ['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">
-    {!! Form::label('content', 'Post Content') !!}
+    {!! Form::label('content', 'Category Content') !!}
     {!! Form::textarea('content', null, ['class' => 'form-control']) !!}
     </div>
 
