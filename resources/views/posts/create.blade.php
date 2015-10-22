@@ -4,6 +4,9 @@
 @section('content')
 
 {!! Form::open(['route'=> 'posts.store']) !!}
+
+@include('errors._validation')
+
 	<legend>New Post</legend>
 	<div class="form-group">
 	{!! Form::label('title', 'Post Title') !!}

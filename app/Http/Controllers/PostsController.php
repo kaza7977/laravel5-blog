@@ -37,6 +37,15 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+    	$this->validate($request,[
+    		'title' =>'required|max:225',
+    		'content' => 'required',
+    		'category_id' =>'required'
+
+    		],[
+    		'title.required' =>'Please Type Blog Title'
+    		]);
+    	
        	$post = \App\Post::create($request->all());
         return redirect()->route('posts.index');
     }
