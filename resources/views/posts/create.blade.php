@@ -15,6 +15,10 @@
 	{!! Form::textarea('content',null, ['class'=>'form-control'])!!}
 	</div>
 
+	<div class="form-group">
+	{!! Form::label('category_id', 'Category') !!}
+	{!! Form::select('category_id',\App\Category::lists('title','id'),null, ['placeholder'=>'Pick Category...','class'=> 'form-control'])!!}
+	</div>
 
 	{!! Form::submit('Publish',['class'=>'btn btn-primary']) !!}
 

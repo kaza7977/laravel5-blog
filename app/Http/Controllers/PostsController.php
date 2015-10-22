@@ -37,7 +37,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-       	$post = \App\Post::create($request->all() + ['category_id' => 1]);
+       	$post = \App\Post::create($request->all());
         return redirect()->route('posts.index');
     }
 
