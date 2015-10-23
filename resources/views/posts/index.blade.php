@@ -32,4 +32,6 @@ Posts List
   </tbody>
 </table>
 
+{!! $posts->render() !!}
+
 @stop
