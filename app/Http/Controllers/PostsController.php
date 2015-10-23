@@ -8,12 +8,15 @@ use App\Http\Controllers\Controller;
 
 class PostsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+	public function __construct()
+    {
+       $this->middleware('auth', ['except' => ['index','show']]);
+    }
+
     public function index()
+
+
     {
         $posts= \App\Post::paginate(10);
         return view('posts.index', compact('posts'));
